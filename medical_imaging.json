@@ -6,6 +6,15 @@
         "google_review_rating": 3.8,
         "clinic_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.yelp.com%2Fbiz%2Fhawaii-diagnostic-radiology-honolulu-4&psig=AOvVaw14XWBE0zQXwPyCRdHxKzYJ&ust=1741733548163000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCA2qjNgIwDFQAAAAAdAAAAABAV"
     },
+
+    {
+        "clinic_name": "Hawaii Diagnostic Radiology Services",
+        "address": "94-229 Waipahu Depot St #100, Waipahu, HI 96797",
+        "phone_number": "808-949-0091",
+        "google_review_rating": "N/A",
+        "clinic_image": "https://s3-media0.fl.yelpcdn.com/bphoto/YhkQvZoHlV3DZmxojZsalg/348s.jpg"
+    },
+
     {
         "clinic_name": "Invision Imaging",
         "address": "1010 S King St #109, Honolulu, HI 96814",
