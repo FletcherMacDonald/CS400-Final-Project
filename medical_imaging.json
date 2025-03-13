@@ -1,0 +1,23 @@
+[
+    {
+        "clinic_name": "Hawaii Diagnostic Radiology Services",
+        "address": "2230 Liliha St #106, Honolulu, HI 96817",
+        "phone_number": "808-949-0091",
+        "google_review_rating": 3.8,
+        "clinic_hours": "x",
+        "head_doctor": "x",
+        "date_of_establishment": "x",
+        "private_or_public": "x",
+        "clinic_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.yelp.com%2Fbiz%2Fhawaii-diagnostic-radiology-honolulu-4&psig=AOvVaw14XWBE0zQXwPyCRdHxKzYJ&ust=1741733548163000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCA2qjNgIwDFQAAAAAdAAAAABAV"
+    },
+    {
+        "clinic_name": "Invision Imaging",
+        "address": "1010 S King St #109, Honolulu, HI 96814",
+        "phone_number": "808-xxx-xxxx",
+        "google_review_rating": 4.8,
+        "clinic_hours": "x",
+        "head_doctor": "x",
+        "date_of_establishment": "x",
+        "private_or_public": "x"
+    }
+]
