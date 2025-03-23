@@ -6,14 +6,14 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-# Helper function to retrieve data from the movies.json file
+# Helper function to retrieve data from the medical_imaging.json file
 
 def get_data() -> list[dict]:
     """
-    Retrieve the movies dataset and return it as a list of dictionaries.
+    Retrieve the medical_imaging dataset and return it as a list of dictionaries.
 
     Returns:
-        data (list[dict]): A list of dictionaries containing the movies dataset.
+        data (list[dict]): A list of dictionaries containing the medical_imaging dataset.
     """
     with open('medical_imaging.json', 'r') as file:
         data = json.load(file)
