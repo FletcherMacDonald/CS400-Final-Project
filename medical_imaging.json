@@ -51,7 +51,7 @@
         "clinic_name": "x",
         "address": "x",
         "phone_number": "x",
-        "google_review_rating": x.x,
+        "google_review_rating": 0.0,
         "image_of_clinic": "x"
     },
 
@@ -59,7 +59,7 @@
         "clinic_name": "x",
         "address": "x",
         "phone_number": "x",
-        "google_review_rating": x.x,
+        "google_review_rating": 0.0,
         "image_of_clinic": "x"
     }
 ]
