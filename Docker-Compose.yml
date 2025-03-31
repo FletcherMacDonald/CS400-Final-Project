@@ -1,0 +1,12 @@
+---
+
+services:
+    flask-app:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        image: username/flask-helloworld:1.0
+        container_name: flask_container
+        ports:
+            - "5555:5000"
+        command: ["python", "app.py"]
