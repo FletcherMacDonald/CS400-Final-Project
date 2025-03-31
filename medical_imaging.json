@@ -48,18 +48,18 @@
     },
 
     {
-        "clinic_name": "x",
-        "address": "x",
-        "phone_number": "x",
-        "google_review_rating": 0.0,
-        "image_of_clinic": "x"
+        "clinic_name": "Pacific Radiology Group",
+        "address": "347 N Kuakini St, Honolulu, HI 96817",
+        "phone_number": "(808) 547-9545",
+        "google_review_rating": "N/A",
+        "image_of_clinic": "https://societymechanicalventilation.org/wp-content/uploads/2021/05/Kuakini.jpg"
     },
 
     {
-        "clinic_name": "x",
-        "address": "x",
-        "phone_number": "x",
-        "google_review_rating": 0.0,
-        "image_of_clinic": "x"
+        "clinic_name": "Pacific Radiology Group",
+        "address": "98-1079 Moanalua Rd Aiea, HI 96701",
+        "phone_number": "(808) 535-7733",
+        "google_review_rating": "N/A",
+        "image_of_clinic": "https://www.hawaiipacifichealth.org/media/10838/img_e4676_1v2.jpg?width=500&height=375"
     }
 ]
