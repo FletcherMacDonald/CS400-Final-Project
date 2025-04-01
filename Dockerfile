@@ -18,14 +18,14 @@
 
 FROM python:3.9
 
-RUN mkdir /app
-WORKDIR /app
-COPY requirements.txt /app/requirements.txt
-COPY ortho.json /app/ortho.json
-RUN pip install -r /app/requirements.txt
-COPY app.py /app/app.py
-#COPY test_app.py /app/test_app.py
+RUN mkdir /analyze_data
+WORKDIR /analyze_data
+COPY requirements.txt /analyze_data/requirements.txt
+COPY ortho.json /analyze_data/ortho.json
+RUN pip install -r /analyze_data/requirements.txt
+COPY analyze_data.py /analyze_data/analyze_data.py
+#COPY test_analyze_data.py /app/test_app.py
 #RUN python test_app.py
 
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+
+CMD ["python", "analyze_data.py"]

@@ -6,7 +6,7 @@ services:
             context: ./
             dockerfile: ./Dockerfile
         image: username/flask-helloworld:1.0
-        container_name: flask_container
+        container_name: Final_pro_website
         ports:
-            - "5555:5000"
-        command: ["python", "app.py"]
+            - "5555:5555"
+        command: ["python", "analyze_data.py"]
