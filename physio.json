@@ -1,0 +1,65 @@
+[
+    {
+        "clinic_name": "Moon Physical Therapy",
+        "address": "95-1057 Ainamakua Dr, Mililani, HI 96789",
+        "phone_number": "(808) 597-1005",
+        "google_review_rating": 4.9,
+        "image_of_clinic": " "
+    },
+
+    {
+        "clinic_name": "Fysiotherapie Hawaii",
+        "address": "1120 12th Ave, Honolulu, HI 96816",
+        "phone_number": "(808) 734-4043",
+        "google_review_rating": "4.1",
+        "image_of_clinic": " "
+    },
+
+    {
+        "clinic_name": "Hands-On Physical Therapy",
+        "address": "1441 Kapiolani Blvd Ste 1113",
+        "phone_number": "(808) 218-3660",
+        "google_review_rating": "5.0",
+        "image_of_clinic": " "
+    },
+
+    {
+        "clinic_name": "Holomua Physical Therapy",
+        "address": "200 N Vineyard Blvd Ste 151 Honolulu, HI 96817",
+        "phone_number": "(808) 531-1122",
+        "google_review_rating": "4.6",
+        "image_of_clinic": " "
+    },
+
+    {
+        "clinic_name": "Fukuji & Lum Physical Therapy",
+        "address": "405 N Kuakini St. Ste 701, Honolulu, HI 96817",
+        "phone_number": "(808) 261-4321",
+        "google_review_rating": "4.0",
+        "image_of_clinic": " "
+    },
+
+    {
+        "clinic_name": "Surf & Shore Performance Center",
+        "address": "556 Reed Ln 201, Honolulu, HI 96813",
+        "phone_number": "(808) 599-0177",
+        "google_review_rating": "5.0",
+        "image_of_clinic": " "
+    },
+
+    {
+        "clinic_name": "Next Step Physical Therapy",
+        "address": "1401 S Beretania St. 640, Honolulu, HI 96814",
+        "phone_number": "(808) 521-8188",
+        "google_review_rating": "5.0",
+        "image_of_clinic": " "
+    },
+
+    {
+        "clinic_name": "StayFIT Physical Therapy",
+        "address": "99-128 Aiea Heights Dr. Ste 207, Aiea, HI 96701",
+        "phone_number": "(808) 487-0487",
+        "google_review_rating": "4.8",
+        "image_of_clinic": " "
+    }
+]
