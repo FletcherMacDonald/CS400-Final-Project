@@ -33,14 +33,30 @@ def read_ortho_json() -> list:
         logging.error(f"Error decoding JSON: {e}")
         return []  # Return an empty list if JSON is corrupted
     
+ortho_clinic_data = read_ortho_json()
+
 @app.route('/homepage/ortho_data', methods=['GET'])
 def get_clinics():
-    ortho_clinic_data = read_ortho_json()  #  makes read_json function ortho_clinic_data to load the data 
+    global ortho_clinic_data
     if ortho_clinic_data:
         return jsonify(ortho_clinic_data)  # return the ortho_clinic_data
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500  # if nothing in the clinic_data file return this
+
+@app.route('/homepage/viewer_imput', methods=['POST'])
+def viewer_input():
+    global ortho_clinic_data
     
+    add_clinic_name = input("clinic_name");
+    return "it working"
+    # add_phone_number = input("phone_number");
+    # add_google_review_rating = input("google_review_rating");
+    # add_clinic_hours = input("clinic_hours");
+    # add_head_doctor = input("head_doctor");
+    # add_date_of_establishment = input("date_of_establishment");
+    # add_private_or_public = input("private_or_public ");
+
+      # if nothing in the clinic_data file return this
 #def clinic_rating_order(data: list[dict], google_review_rating: str) -> list:
   #  sorted_clinics = sorted(data, key=lambda clinic: float(clinic.get(google_review_rating, 0) or 0), reverse=True)
    # return sorted_clinics
