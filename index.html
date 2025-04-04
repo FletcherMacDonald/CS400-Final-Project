@@ -1,4 +1,4 @@
-<!DOCTYPE html>  <!-- referencing https://www.youtube.com/watch?v=EU2xgn350EM&t=74s 09:26   -->
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
@@ -29,40 +31,37 @@
     </a>
 
     <ul class="navlist">
-      <li><a href="#">Medical Imaging</a></li>
-      <li><a href="#">Physical Therapy</a></li>
-      <li><a href="#">Orthopedics</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a href="medical-imaging.html">Medical Imaging</a></li>
+      <li><a href="physical-therapy.html">Physical Therapy</a></li>
+      <li><a href="orthopedics.html">Orthopedics</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="#">Add Clinic</a></li>
     </ul>
 
-    <div class=""right-content">
-      <a href="#" class="nav-btn">Sign In</a>
-      <div class="bx bx-menu" id="menu-icon"></div>
-    </div> 
   </header>
 
   <!-- header -->
   <section class="hero">
     <div class="hero-text">
-      <h5>Placeholder text1 here</h5>
-      <h1>Advanced Imaging. Expert Care. Better Recovery.</h1>
-      <p>Placeholder text3 here</p>
-
-      <div class="main-hero">
-        <a hrerf="#" class="btn">Button Text Here</a>
-        <a href="#" class="change-this">
-          texthere | <span>Text here</span>
-        </a>
-      </div>
+      <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Advanced Imaging.</h1>
+      <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Expert Care.</h1>
+      <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Better Recovery.</h1>
     </div>
 
-    <div class="hero-img">
+    <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400">
       <img src="img/hero.png">
     </div>
   </section>
 
-  <!-- js link-->
+  <!-- js link--> 
   <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:1,
+    });
+  </script>
 
 </body>
 </html>
