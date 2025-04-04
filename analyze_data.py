@@ -81,6 +81,38 @@ def get_medical_imaging_clinics():
         return jsonify({"error": "Unable to load clinic data"}), 500 
     
 ######################################################################
+#wilneris!
+def read_physio_json() -> list:
+    """
+    Reads JSON data from the 'physio.json' file.
+    
+    Description:
+    This function opens 'pysio.json' and loads the clinic data list.
+    
+    Returns:
+    list: A list of dictionaries representing physiotherapy clinics.
+    """
+    try:
+        with open('physio.json', 'r') as f:
+            physio_clinic_data = json.load(f)
+            logging.debug("Successfully loaded data from 'physio.json'.")
+            return physio_clinic_data
+    except FileNotFoundError as e:
+        logging.error(f"File not found: {e}")
+        return []  # return an empty list if the file is not found
+    except json.JSONDecodeError as e:
+        logging.error(f"Error decoding PHYSIO.JSON: {e}")
+        return []  # return an empty list if JSON is corrupted
+    
+@app.route('/homepage/physiotherapy_data', methods=['GET'])
+def get_physiotherapy_clinics():
+    medical_imaging_clinic_data = read_physio_json()  
+    if medical_imaging_clinic_data:
+        return jsonify(medical_imaging_clinic_data )  # return data
+    else:
+        return jsonify({"error": "Unable to load clinic data"}), 500 
+
+######################################################################
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
