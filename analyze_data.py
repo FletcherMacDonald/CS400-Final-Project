@@ -18,20 +18,9 @@ def home():
     ortho_clinic_data = read_ortho_json()
     return render_template('index.html', clinics=ortho_clinic_data)
 
-######################################################################
-# Fletcher's function to read ortho clinic data from 'ortho.json'
 def read_ortho_json() -> list:
     """
     Reads the JSON data from the 'ortho.json' file.
-    
-    Description:
-    This function opens 'ortho.json' and loads the clinic data into a Python list.
-    
-    Args:
-    no arguments
-
-    Returns:
-    list: A list of dictionaries representing orthopedic clinics from the JSON file.
     """
     try:
         with open('ortho.json', 'r') as f:
@@ -55,7 +44,7 @@ def get_clinics():
         return jsonify(ortho_clinic_data)  # Return the clinic data in JSON format
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500  # If no data is found
-    
+
 @app.route('/orthopedics')
 def orthopedics():
     """
