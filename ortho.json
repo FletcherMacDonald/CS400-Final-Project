@@ -7,7 +7,8 @@
         "clinic_hours": "Mon-Fri: 8AM - 5PM",
         "head_doctor": "Dr. John Doe",
         "date_of_establishment": "2005",
-        "private_or_public": "Private"
+        "private_or_public": "Private",
+        "image_name": "All-Access-Ortho.webp"
     },
     {
         "clinic_name": "IMUA Orthopedics, Sports & Health",
@@ -17,7 +18,8 @@
         "clinic_hours": "Mon-Sat: 9AM - 6PM",
         "head_doctor": "Dr. Jane Smith",
         "date_of_establishment": "2010",
-        "private_or_public": "Private"
+        "private_or_public": "Private",
+        "image_name": "PracticeLogo.png"
     },
     {
         "clinic_name": "Island Orthopaedics – Honolulu Office",
@@ -27,7 +29,8 @@
         "clinic_hours": "Mon-Fri: 8AM - 5PM, Sat: 9AM - 2PM",
         "head_doctor": "Dr. Alan Wong",
         "date_of_establishment": "1998",
-        "private_or_public": "Private"
+        "private_or_public": "Private",
+        "image_name": "bc1888_2f01d0e81efe47a9b35bcd4ae1b50867~mv2.png"
     },
     {
         "clinic_name": "Orthopedics Hawaii",
@@ -37,7 +40,8 @@
         "clinic_hours": "Mon-Fri: 7AM - 5PM",
         "head_doctor": "Dr. Sarah Kim",
         "date_of_establishment": "2002",
-        "private_or_public": "Private"
+        "private_or_public": "Private",
+        "image_name": "Ortho+Hawaii+NEW+FINAL+lg+red-black-blue+text+grey+mount.png"
     },
     {
         "clinic_name": "The Queen's Medical Center – Orthopedic Services",
@@ -47,7 +51,8 @@
         "clinic_hours": "Mon-Sun: Open 24 Hours",
         "head_doctor": "Dr. Robert Chang",
         "date_of_establishment": "1859",
-        "private_or_public": "Public"
+        "private_or_public": "Public",
+        "image_name": "queens-placeholder.png"
     },
     {
         "clinic_name": "Kuakini Health System – Orthopedic Clinic",
@@ -57,7 +62,8 @@
         "clinic_hours": "Mon-Fri: 8AM - 4PM",
         "head_doctor": "Dr. Emily Tanaka",
         "date_of_establishment": "1900",
-        "private_or_public": "Public"
+        "private_or_public": "Public",
+        "image_name": "591386.avif"
     },
     {
         "clinic_name": "Hawaii Shoulder & Orthopedic Institute",
@@ -67,7 +73,8 @@
         "clinic_hours": "Mon-Fri: 9AM - 5PM, Sat: 10AM - 3PM",
         "head_doctor": "Dr. Mark Rivera",
         "date_of_establishment": "2015",
-        "private_or_public": "Private"
+        "private_or_public": "Private",
+        "image_name": "6060df11343bd7fabc5cbfa8_HiSOI-logo-primary-500.png"
     },
     {
         "clinic_name": "Orthopedic Associates of Hawaii",
@@ -77,6 +84,7 @@
         "clinic_hours": "Mon-Fri: 8AM - 6PM",
         "head_doctor": "Dr. Lisa Nakamura",
         "date_of_establishment": "1985",
-        "private_or_public": "Private"
+        "private_or_public": "Private",
+        "image_name": "download.png"
     }
 ]

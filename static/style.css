@@ -6,6 +6,7 @@
     text-decoration: none;
     font-family: "Roboto", sans-serif;
 }
+
 :root{
     --bg-color: #ffdbac;
     --text-color: #0c0c0c;
@@ -20,6 +21,7 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
 }
+
 header{
     position: fixed;
     width: 100%;
@@ -32,28 +34,38 @@ header{
     justify-content: space-between;
     transition: all .50s ease;
 }
+
 .logo img{
     width: 70%;
     height: auto;
 }
+
+/* Remove the white background and box around navigation */
 .navlist{
     display: flex;
+    align-items: center; /* Ensure the links are aligned correctly */
 }
+
 .navlist a{
     display: inline-block;
-    margin: 0 55px;
+    margin: 0 25px; /* Adjust spacing between the links */
     color: var(--text-color);
     font-size: var(--p-font);
     transition: all .6s ease;  
     white-space: nowrap; 
+    padding: 10px 0; /* Give some vertical padding for better spacing */
+    text-transform: uppercase; /* Optional: makes links in uppercase */
 }
+
 .navlist a:hover{
     color: var(--main-color);
 }
+
 .right-content{
     display: flex;
     align-items: center;
 }
+
 .nav-btn{
     display: inline-block;
     padding: 9px 24px;
@@ -65,21 +77,25 @@ header{
     font-weight: 500;
     transition: all .6s ease;
 }
+
 .nav-btn:hover{
     transform: translateY(-5px);
     border: 2px solid var(--main-color);
     color: var(--main-color)
 }
-#menu-icon{  /* 07:12. look into how he put the icon, it's not appreating on my end before adding display:none*/
+
+#menu-icon{
     font-size: 42px;
     z-index: 10001;
     cursor: pointer;
     margin-left: 25px;
     display: none; 
 }
+
 section{
     padding: 0 14%;
 }
+
 .hero{
     position: relative;
     width: 100%;
@@ -92,20 +108,24 @@ section{
     align-items: center;
     gap: 2rem;
 }
+
 .hero-img img{
     width: 70%;
     height: auto;
 }
+
 .hero-text h1{
     font-size: var(--med-font); 
     font-weight: 900;
     margin: 15px 0;
 }
+
 .hero-text h5{
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1px;
 } 
+
 .hero-text p{
     width: 100%;
     max-width: 620px;
@@ -115,10 +135,12 @@ section{
     color: var(--text-color);
     margin-bottom: 40px;
 }
+
 .main-hero{
     display: flex;
     align-items: center;
 }
+
 .btn{
     display: inline-block;
     padding: 13px 32px;
@@ -131,9 +153,11 @@ section{
     transition: all .6s ease;
     margin-right: 20px;
 }
+
 .btn:hover{
     transform: scale(1,1);
 }
+
 .price{
     display: flex;
     align-items: center;
@@ -141,18 +165,21 @@ section{
     font-weight: bold;
     color: var(--text-color);
 }
+
 .price scan{
     font-size: 17px;
     font-weight: 400;
     color: var(--main-color);
     margin-left: 10px;
 }
+
 .icons{
     position: absolute;
     top: 50%;
     padding: 0 7%;
     transform: translateY(-50%);
 }
+
 .icons i{
     display: block;
     margin: 35px 0;
@@ -160,6 +187,7 @@ section{
     font-size: 23px;
     transition: all .6s;
 }
+
 .icons i:hover{
     transform: translateY(-5px);
     color: var(--main-color);
@@ -171,10 +199,12 @@ section{
     right: 7%;
     transform: translateY(-50%);
 }
+
 .scroll a{
     font-size: 16px;
     color: var(--text-color);
 }
+
 .scroll i{
     font-size: 20px;
     color: var(--text-color);
@@ -192,12 +222,14 @@ section{
         right: 4%
     }
 }
+
 @media(max-width: 1670px){
     :root{
         --big-font: 5.5rem;
         --p-font: 15px;
     }
 }
+
 @media(max-width: 1370px){
     .icons{
         display: none;
@@ -206,6 +238,7 @@ section{
         padding: 0 4%;
     }
 }
+
 @media(max-width: 1150px){
     :root{
         --big-font: 4.6rem;
@@ -283,6 +316,7 @@ section{
         --big-font: 4rem;
     }
 }
+
 @media(max-width: 440px){
     :root{
         --big-font: 3.4rem;
@@ -294,5 +328,65 @@ section{
         height: 360px;
         width: 360px;
         margin: 0 auto;
+    }
+}
+
+/* Orthopedic Clinics Page Styles */
+.clinic-image {
+    width: 100%;  /* Ensure full width is used */
+    height: auto; /* Adjust the height according to the aspect ratio */
+    max-width: 300px; /* Limit the width to 300px */
+    max-height: 300px; /* Limit the height to 300px */
+    object-fit: contain;  /* Ensure the image fits inside the box */
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 0;
+}
+
+li {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* For 3 columns layout */
+    box-sizing: border-box;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+li strong {
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+li p {
+    margin-bottom: 10px;
+}
+
+li br {
+    margin-bottom: 10px;
+}
+
+/* Responsive for Clinic List */
+@media (max-width: 1200px) {
+    li {
+        width: calc(50% - 20px); /* 2 columns layout on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    li {
+        width: 100%; /* 1 column layout on small screens */
     }
 }
