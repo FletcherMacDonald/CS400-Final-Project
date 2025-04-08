@@ -1,65 +1,65 @@
 [ 
     {
-        "clinic_name": "Hawaii Diagnostic Radiology Services",
+        "clinic_name": "Hawaii Diagnostic Radiology Services -- Liliha",
         "address": "2230 Liliha St #106, Honolulu, HI 96817",
         "phone_number": "(808) 949-0091",
-        "google_review_rating": 3.8,
-        "image_of_clinic": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.yelp.com%2Fbiz%2Fhawaii-diagnostic-radiology-honolulu-4&psig=AOvVaw14XWBE0zQXwPyCRdHxKzYJ&ust=1741733548163000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCA2qjNgIwDFQAAAAAdAAAAABAV"
+        "review_rating": 3.8,
+        "image_name": "hawaii-diagnostic-radiology-services.png"
     },
 
     {
-        "clinic_name": "Hawaii Diagnostic Radiology Services",
+        "clinic_name": "Hawaii Diagnostic Radiology Services -- Waipahu",
         "address": "94-229 Waipahu Depot St #100, Waipahu, HI 96797",
         "phone_number": "(808) 949-0091",
-        "google_review_rating": "N/A",
-        "image_of_clinic": "https://s3-media0.fl.yelpcdn.com/bphoto/YhkQvZoHlV3DZmxojZsalg/348s.jpg"
+        "review_rating": 3.8,
+        "image_name": "hawaii-diagnostic-radiology-services.png"
     },
 
     {
-        "clinic_name": "Invision Imaging",
+        "clinic_name": "Invision Imaging -- Medical Arts Building",
         "address": "1010 S King St #109, Honolulu, HI 96814",
         "phone_number": "(808) 593-8080",
-        "google_review_rating": 4.4,
-        "image_of_clinic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7OFVBrsbbsoGD-EP0dk-AF8hto_90fhX0xw&s"
+        "review_rating": 4.4,
+        "image_name": "invision-imaging.png"
     },
 
     {
-        "clinic_name": "Invision Imaging",
+        "clinic_name": "Invision Imaging -- Hale Pawa‘a Professional Services Building",
         "address": "1401 S Beretania St. #107, Honolulu, HI 96814",
         "phone_number": "(808) 591-1504",
-        "google_review_rating": 3.9,
-        "image_of_clinic": "https://s3-media0.fl.yelpcdn.com/bphoto/4bQDewUGeixsWMEOOftZtw/348s.jpg"
+        "review_rating": 3.9,
+        "image_name": "invision-imaging.png"
     },
 
     {
-        "clinic_name": "Invision Imaging",
+        "clinic_name": "Invision Imaging -- Waterfront Plaza",
         "address": "500 Ala Moana Blvd #5b, Honolulu, HI 96813",
         "phone_number": "(808) 275-2008",
-        "google_review_rating": 3.3,
-        "image_of_clinic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxTN83CVAWnqYeM4zQJDL5ZZk_KP7zyPE6VQ&s"
+        "review_rating": 3.3,
+        "image_name": "invision-imaging.png"
     },
 
     {
-        "clinic_name": "Malama Imaging LLC",
-        "address": "1401 S Beretania St. # 310, Honolulu, HI 96814",
-        "phone_number": "(808) 524-4055",
-        "google_review_rating": 3.7,
-        "image_of_clinic": "https://s3-media0.fl.yelpcdn.com/bphoto/ejtl6R1uSWvcYvF4c7qAhA/348s.jpg"
+        "clinic_name": "Kuakini Plaza Imaging",
+        "address": "321 N Kuakini St, Honolulu, HI 96817",
+        "phone_number": "(808) 547-9445",
+        "review_rating": 4.6,
+        "image_name": "kuakini-2.png"
     },
 
     {
-        "clinic_name": "Pacific Radiology Group",
-        "address": "347 N Kuakini St, Honolulu, HI 96817",
-        "phone_number": "(808) 547-9545",
-        "google_review_rating": "N/A",
-        "image_of_clinic": "https://societymechanicalventilation.org/wp-content/uploads/2021/05/Kuakini.jpg"
+        "clinic_name": "Queen's Medical Center Imaging Services",
+        "address": "1301 Punchbowl St Honolulu, HI 96813",
+        "phone_number": "(808) 691-7171",
+        "review_rating": 3.4,
+        "image_name": "queens-2.png"
     },
 
     {
-        "clinic_name": "Pacific Radiology Group",
-        "address": "98-1079 Moanalua Rd Aiea, HI 96701",
-        "phone_number": "(808) 535-7733",
-        "google_review_rating": "N/A",
-        "image_of_clinic": "https://www.hawaiipacifichealth.org/media/10838/img_e4676_1v2.jpg?width=500&height=375"
+        "clinic_name": "Adventist Health Castle: Imaging Center",
+        "address": "640 Ulukahiki St Kailua, HI 96734",
+        "phone_number": "(808) 263-5166",
+        "review_rating": 4.6,
+        "image_name": "adventist-health-castle.png"
     }
 ]

@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Imaging Clinics</title>
+    <!-- Link to the existing style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <header>
-        <h1 id="main_title" class="title family gr">Hawaii Diagnostic Radiology Services - Saint Francis</h1>
-        <img src="static/img/clinic-pic-1.png" alt="">
-        <p>Address: 2230 Liliha St #106, Honolulu, HI 96817</p>
-        <p>Phone: (808) 949-0091</p>
+<body class="medical-imaging-page">
+    <h1>Medical Imaging Clinics</h1>
 
-        <h1 id="main_title" class="title family gr">Invision Imaging - Medical Arts Building</h1>
-        <img src="static/img/clinic-pic-2.png" alt="">
-        <p>Address: 1010 S King St #109, Honolulu, HI 96814</p>
-        <p>Phone: (808) 593-8080</p>
-
-        <h1 id="main_title" class="title family gr">*Add the rest of the six clinics here</h1>
-    </header>
+    <!-- Display clinic data passed from the Flask route -->
+    {% if clinics %}
+        <div class="clinics-container">
+            <ul>
+                {% for clinic in clinics %}
+                    <li>
+                        <strong>{{ clinic.clinic_name }}</strong><br>
+                        <img class="clinic-image" 
+                             src="{{ url_for('static', filename='img/' ~ clinic.image_name) }}" 
+                             alt="{{ clinic.clinic_name }}">
+                        <br>
+                        Address: {{ clinic.address }}<br>
+                        <br>
+                        Phone: {{ clinic.phone_number }}<br>
+                        <br>
+                        Rating: {{clinic.review_rating}}<br>
+                        <br>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p>No clinic data available.</p>
+    {% endif %}
 </body>
 </html>
