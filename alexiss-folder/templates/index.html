@@ -1,19 +1,16 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rehab Revive Website</title>
-  <link rel ="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
   <!-- box icons link-->
-  <link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min/css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
   <!-- remix icons link-->
-  <link
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-  rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
 
   <!-- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,21 +23,20 @@
 
   <!-- header -->
   <header>
-    <a href="#" class = "logo">
-      <img src="img/logo-2.png">
+    <a href="#" class="logo">
+      <img src="{{ url_for('static', filename='img/logo-2.png') }}" alt="Logo">
     </a>
 
     <ul class="navlist">
-      <li><a href="medical-imaging.html">Medical Imaging</a></li>
+      <li><a href="medical-imaging-page">Medical Imaging</a></li>
       <li><a href="physical-therapy.html">Physical Therapy</a></li>
-      <li><a href="orthopedics.html">Orthopedics</a></li>
-      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="orthopedics-page">Orthopedics</a></li> 
+      <li><a href="about-us-page">About Us</a></li>
       <li><a href="add-clinic.html">Add Clinic</a></li>
     </ul>
-
   </header>
 
-  <!-- header -->
+  <!-- hero section -->
   <section class="hero">
     <div class="hero-text">
       <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Advanced Imaging.</h1>
@@ -49,17 +45,15 @@
     </div>
 
     <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400">
-      <img src="img/hero.png">
+      <img src="{{ url_for('static', filename='img/hero.png') }}" alt="Hero Image">
     </div>
   </section>
+ 
 
-  <!-- js link--> 
-  <script src="js/script.js"></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
-      offset:1,
+      offset: 1,
     });
   </script>
 

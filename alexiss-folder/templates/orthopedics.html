@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthopedic Clinics</title>
+    <!-- Link to the existing style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Orthopedic Clinics</h1>
+
+    <!-- Display clinic data passed from the Flask route -->
+    {% if clinics %}
+        <ul>
+            {% for clinic in clinics %}
+                <li>
+                    <strong>{{ clinic.name }}</strong><br>
+                    Address: {{ clinic.address }}<br>
+                    Phone: {{ clinic.phone }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No clinic data available.</p>
+    {% endif %}
+</body>
+</html>
