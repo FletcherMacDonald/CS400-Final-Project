@@ -21,11 +21,13 @@
                              src="{{ url_for('static', filename='img/' ~ clinic.image_name) }}" 
                              alt="{{ clinic.clinic_name }}">
                         <br>
-                        Address: {{ clinic.address }}<br>
+                        <b>Address: </b>{{ clinic.address }}<br>
                         <br>
-                        Phone: {{ clinic.phone_number }}<br>
+                        <b>Phone:</b> {{ clinic.phone_number }}<br>
                         <br>
-                        Rating: {{clinic.review_rating}}<br>
+                        <b>Rating:</b> {{clinic.review_rating}}<br>
+                        <br>
+                        <b>Hours:</b> {{clinic.hours}}<br>
                         <br>
                     </li>
                 {% endfor %}
