@@ -54,23 +54,46 @@ def orthopedics():
     return render_template('orthopedics.html', clinics=ortho_clinic_data)  # Pass the data to the template
 
 
-@app.route('add-clinic-page', methods=['POST'])
+@app.route('/add-clinic-page', methods=['GET', 'POST'])
 def viewer_input():
-    global ortho_clinic_data
-    
-    add_clinic_name = input("clinic_name");
-    return "it working"
-    # add_phone_number = input("phone_number");
-    # add_google_review_rating = input("google_review_rating");
-    # add_clinic_hours = input("clinic_hours");
-    # add_head_doctor = input("head_doctor");
-    # add_date_of_establishment = input("date_of_establishment");
-    # add_private_or_public = input("private_or_public ");
+    if request.method == 'POST':
+        clinic_type = request.form['clinic_type']
 
-      # if nothing in the clinic_data file return this
-#def clinic_rating_order(data: list[dict], google_review_rating: str) -> list:
-  #  sorted_clinics = sorted(data, key=lambda clinic: float(clinic.get(google_review_rating, 0) or 0), reverse=True)
-   # return sorted_clinics
+        if clinic_type == 'Orthopedics':
+            clinics = read_ortho_json()
+            filename = 'ortho.json'
+        elif clinic_type == 'Medical Imaging':
+            clinics = read_medical_imaging_json()
+            filename = 'medical_imaging.json'
+        elif clinic_type == 'Physical Therapy':
+            clinics = read_physio_json()
+            filename = 'physio.json'
+        else:
+            return jsonify({"error": "Invalid clinic type selected."}), 400
+
+        new_clinic = {
+            "type": clinic_type,
+            "name": request.form['name'],
+            "address": request.form['address'],
+            "hours": request.form['hours'],
+            "ownership": request.form['public_private'],
+            "rating": float(request.form['rating']),
+            "head_doctor": request.form['head_doctor'],
+            "date_established": request.form['date_established']
+        }
+
+        clinics.append(new_clinic)
+
+        # Save back to the correct JSON file
+        with open(filename, 'w') as f:
+            json.dump(clinics, f, indent=4)
+
+        logging.debug(f"New {clinic_type} clinic added successfully to {filename}.")
+
+        return jsonify({"message": f"{clinic_type} clinic added successfully!"}), 200
+
+    # If GET request, show the form
+    return render_template('add-clinic.html')
 
 ######################################################################
 #alexis

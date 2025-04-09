@@ -260,3 +260,74 @@ footer {
     background-color: var(--bg-color); 
     z-index: 100;
   }  
+/* Add Clinic Page Styles */
+section{
+    padding: 20px 10%;
+    background: var(--bg-color);
+    text-align: center;
+}
+
+h1{
+    font-size: var(--med-font);
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 500px;
+    display: grid;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form input[type="number"] {
+    -moz-appearance: textfield; /* Removes the spinner for number input */
+}
+
+form button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #888; /* Adjusted hover effect */
+}
+
+/* Responsive form adjustments */
+@media(max-width: 950px) {
+    section {
+        padding: 20px 4%;
+    }
+    form {
+        padding: 15px;
+        max-width: 100%;
+    }
+}
