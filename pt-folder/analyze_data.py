@@ -34,8 +34,8 @@ def read_ortho_json() -> list:
         logging.error(f"Error decoding JSON: {e}")
         return []  # Return an empty list if JSON is corrupted
 
-@app.route('/homepage/ortho_data', methods=['GET'])
-def get_clinics():
+@app.route('/ortho_data', methods=['GET'])
+def get_ortho_clinics():
     """
     Returns orthopedic clinic data in JSON format.
     """
@@ -45,7 +45,7 @@ def get_clinics():
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500  # If no data is found
 
-@app.route('/orthopedics')
+@app.route('/orthopedics-page')
 def orthopedics():
     """
     Renders the orthopedics page and passes clinic data to the template.
@@ -76,16 +76,16 @@ def viewer_input():
 #alexis
 def read_medical_imaging_json() -> list:
     """
-    Reads the JSON data from the 'ortho.json' file.
+    Reads the JSON data from the 'medical-imaging.json' file.
     
     Description:
-    This function opens 'ortho.json' and loads the clinic data into a Python list.
+    This function opens 'medical-imaging.json' and loads the clinic data into a Python list.
     
     Args:
     no arguments
 
     Returns:
-    list: A list of dictionaries representing orthopedic clinics from the JSON file.
+    list: A list of dictionaries representing medical imaging clinics from the JSON file.
     """
     try:
         with open('medical_imaging.json', 'r') as f:
@@ -99,58 +99,62 @@ def read_medical_imaging_json() -> list:
         logging.error(f"Error decoding JSON: {e}")
         return []  # Return an empty list if JSON is corrupted
     
-@app.route('/homepage/medical-imaging_data', methods=['GET'])
+#@app.route('/homepage/medical-imaging_data', methods=['GET'])
+@app.route('/medical-imaging_data', methods=['GET'])
 def get_medical_imaging_clinics():
     medical_imaging_clinic_data = read_medical_imaging_json()  #  makes read_json function ortho_clinic_data to load the data 
     if medical_imaging_clinic_data:
         return jsonify(medical_imaging_clinic_data )  # return the ortho_clinic_data
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500 
-    
+
+@app.route('/medical-imaging-page')
+def medical_imaging_page():
+    """
+    Renders the medical imaging page and passes clinic data to the template.
+    """
+    medical_imaging_clinic_data = read_medical_imaging_json() # Get the clinic data from the JSON file
+    return render_template('medical-imaging.html', clinics=medical_imaging_clinic_data)  # Pass the data to the template
+
 ######################################################################
 #wilneris!
 def read_pt_json() -> list:
-    """
-    Reads JSON data from the 'physio.json' file.
-    
-    Description:
-    This function opens 'pysio.json' and loads the clinic data list.
-    
-    Returns:
-    list: A list of dictionaries representing physiotherapy clinics.
-    """
     try:
-        with open('physio.json', 'r') as f:
-            pt_clinic_data = json.load(f)
-            logging.debug("Successfully loaded data from 'physio.json'.")
-            return pt_clinic_data
+        with open('pt.json', 'r') as f:
+            pt_data = json.load(f)
+            logging.debug("Successfully loaded data from 'ortho.json'.")
+            return pt_data
     except FileNotFoundError as e:
         logging.error(f"File not found: {e}")
-        return []  # return an empty list if the file is not found
+        return []  # Return an empty list if the file is not found
     except json.JSONDecodeError as e:
-        logging.error(f"Error decoding PHYSIO.JSON: {e}")
-        return []  # return an empty list if JSON is corrupted
+        logging.error(f"Error decoding JSON: {e}")
+        return []  # Return an empty list if JSON is corrupted
     
-@app.route('/homepage/physical-therapy_data', methods=['GET'])
-def get_physiotherapy_clinics():
-    pt_clinic_data = read_pt_json()  
-    if pt_clinic_data:
-        return jsonify(pt_clinic_data)  # return data
+
+@app.route('/pt-data', methods=['GET'])
+def get_pt_clinics():
+    pt_data = read_pt_json()  #  makes read_json function ortho_clinic_data to load the data 
+    if pt_data:
+        return jsonify(pt_data)  # return the ortho_clinic_data
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500 
 
-@app.route('/physical_therapy')
-def physicaltherapy():
-    """
-    Renders the physical therapy page (pt) and passes clinic data to template.
-    """
-    pt_clinic_data = read_pt_json()
-    return render_template('physical_therapy.html', clinics=pt_clinic_data)
-######################################################################
+@app.route('/pt-page')
+def pt_page():
 
+    pt_clinic_data = read_pt_json() # Get the clinic data from the JSON file
+    return render_template('physical-therapy.html', clinics=pt_clinic_data) 
+
+######################################################################
+#about us page
+@app.route('/about-us-page')
+def about_us_page():
+    """
+    Renders the about-us.html page
+    """
+    return render_template('about-us.html')
+
+######################################################################
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5555)
-
-
-
-    

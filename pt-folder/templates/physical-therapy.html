@@ -7,7 +7,7 @@
     <!-- Link to the existing style.css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body class="physical-therapy-page">
+<body class="pt-page">
     <h1>Physical Therapy Clinics</h1>
 
     <!-- Display clinic data passed from the Flask route -->
@@ -18,20 +18,16 @@
                     <li>
                         <strong>{{ clinic.clinic_name }}</strong><br>
                         <img class="clinic-image" 
-                             src="{{ url_for('static', filename='img/' ~ clinic.image_name) }}" 
+                             src="{{ url_for('static', filename='img/' ~ clinic.clinic_image) }}" 
                              alt="{{ clinic.clinic_name }}">
                         <br>
-                        Address: {{ clinic.address }}<br>
+                        <b>Address: </b>{{ clinic.address }}<br>
                         <br>
-                        Phone: {{ clinic.phone_number }}<br>
+                        <b>Phone:</b> {{ clinic.phone_number }}<br>
                         <br>
-                        Rating: {{clinic.google_review_rating}}<br>
+                        <b>Rating:</b> {{ clinic.google_review_rating }}<br>
                         <br>
-                        Hours: {{clinic.clinic_hours}}<br>
-                        <br>
-                        Head Doctor: {{clinic.head_doctor}}<br>
-                        <br>
-                        Private or Public: {{clinic.private_or_public}}<br>
+                        <b>Hours:</b> {{clinic.clinic_hours}}<br>
                         <br>
                     </li>
                 {% endfor %}
