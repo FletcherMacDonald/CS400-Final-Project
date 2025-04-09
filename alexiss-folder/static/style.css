@@ -44,18 +44,19 @@ header{ /*tabs*/
 .navlist{
     display: flex;
     align-items: center; /* Ensure the links are aligned correctly */
+    flex-wrap: nowrap; /* for tabs to go on one line */
 }
 
 .navlist a{
     display: inline-block;
-    margin: 0 25px; /* Adjust spacing between the links */
+    margin: 0 5px; /* adjust spacing between the tabs closer. original was 25px */
     color: var(--text-color);
     font-size: var(--p-font);
     transition: all .6s ease;  
     white-space: nowrap; 
     padding: 10px 0; /* Give some vertical padding for better spacing */
     text-transform: uppercase; /* Optional: makes links in uppercase */
-}
+} 
 
 .navlist a:hover{
     color: var(--main-color); 
@@ -218,7 +219,7 @@ li {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: calc(33.333% - 20px); /* For 3 columns layout */
     box-sizing: border-box;
-}
+} 
 
 li:hover {
     transform: translateY(-5px);
