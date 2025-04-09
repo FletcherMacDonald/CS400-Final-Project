@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthopedic Clinics</title>
+    <!-- Link to the existing style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="orthopedics-page">
+    <h1>Orthopedic Clinics</h1>
+
+    <!-- Display clinic data passed from the Flask route -->
+    {% if clinics %}
+        <div class="clinics-container">
+            <ul>
+                {% for clinic in clinics %}
+                    <li>
+                        <strong>{{ clinic.clinic_name }}</strong><br>
+                        <img class="clinic-image" 
+                             src="{{ url_for('static', filename='img/' ~ clinic.image_name) }}" 
+                             alt="{{ clinic.clinic_name }}">
+                        <br>
+                        Address: {{ clinic.address }}<br>
+                        <br>
+                        Phone: {{ clinic.phone_number }}<br>
+                        <br>
+                        Rating: {{clinic.google_review_rating}}<br>
+                        <br>
+                        Hours: {{clinic.clinic_hours}}<br>
+                        <br>
+                        Head Doctor: {{clinic.head_doctor}}<br>
+                        <br>
+                        EST: {{clinic.date_of_establishment}}<br>
+                        <br>
+                        Private or Public: {{clinic.private_or_public}}<br>
+                        <br>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p>No clinic data available.</p>
+    {% endif %}
+</body>
+</html>

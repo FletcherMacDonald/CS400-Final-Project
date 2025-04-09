@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rehab Revive Website</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  <!--produces the hero image and hero text zoom-in-left-->
+</head>
+
+
+<body>
+
+  <!-- header -->
+  <header>
+    <a href="#" class="logo">
+      <img src="{{ url_for('static', filename='img/rehab-revive-team-orangeos-logo.png') }}" alt="Logo">
+    </a>
+
+    <ul class="navlist">
+      <li><a href="medical-imaging-page">Medical Imaging</a></li>
+      <li><a href="physical-therapy.html">Physical Therapy</a></li>
+      <li><a href="orthopedics-page">Orthopedics</a></li> 
+      <li><a href="about-us-page">About Us</a></li>
+      <li><a href="add-clinic.html">Add Clinic</a></li>
+    </ul>
+  </header>
+
+  <!-- hero section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Advanced Imaging.</h1>
+      <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Expert Care.</h1>
+      <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Better Recovery.</h1>
+    </div>
+
+    <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400">
+      <img src="{{ url_for('static', filename='img/hero.png') }}" alt="Hero Image">
+    </div>
+  </section>
+ 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--produces the hero image and hero text zoom-in-left-->
+  <script>  
+    AOS.init({
+      offset: 1,
+    });
+  </script>
+
+  <!-- footer -->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <p class="col-md-4 mb-0 text-body-secondary">© 2025 orangeOS</p>
+
+  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+  </a>
+  <!-- COMMENT OUT START 
+  <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+  </ul>
+COMMENT OUT END -->
+</footer>
+
+</body>
+</html>
