@@ -1,0 +1,12 @@
+---
+
+services:
+    flask-app:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        image: username/flask-helloworld:1.0
+        container_name: Final_pro_website
+        ports:
+            - "5002:5000"
+        command: ["python", "analyze_data.py"]
