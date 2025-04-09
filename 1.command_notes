@@ -1,0 +1,11 @@
+#cp a directoryyyyyyyy to new place
+    #cp -R source_directory destination_directory
+
+#open website in chrome
+    #open -a "Google Chrome" 2_website-drafting
+
+    #or after running the commands below, do open -a "Google Chrome" index.html
+        (base) lexramelb@Kiyomi-2 final_project % cd 1_website-exampleee 
+        (base) lexramelb@Kiyomi-2 1_website-exampleee % ls
+        LICENSE         README.md       dist            index.html      src
+        (base) lexramelb@Kiyomi-2 1_website-exampleee % open -a "Google Chrome" index.html  
