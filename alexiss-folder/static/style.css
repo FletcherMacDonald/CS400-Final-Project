@@ -253,3 +253,10 @@ li br {
         width: 100%; /* 1 column layout on small screens */
     }
 }
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--bg-color); 
+    z-index: 100;
+  }  
