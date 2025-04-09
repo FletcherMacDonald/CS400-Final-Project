@@ -118,35 +118,40 @@ def medical_imaging_page():
 
 ######################################################################
 #wilneris!
-def read_physio_json() -> list:
+def read_pt_json() -> list:
     """
-    Reads JSON data from the 'physio.json' file.
+    Reads JSON data from the 'pt.json' file.
     
     Description:
     This function opens 'pysio.json' and loads the clinic data list.
     
     Returns:
-    list: A list of dictionaries representing physiotherapy clinics.
+    list: A list of dictionaries representing pttherapy clinics.
     """
     try:
-        with open('physio.json', 'r') as f:
-            physio_clinic_data = json.load(f)
-            logging.debug("Successfully loaded data from 'physio.json'.")
-            return physio_clinic_data
+        with open('pt.json', 'r') as f:
+            pt_clinic_data = json.load(f)
+            logging.debug("Successfully loaded data from 'pt.json'.")
+            return pt_clinic_data
     except FileNotFoundError as e:
         logging.error(f"File not found: {e}")
         return []  # return an empty list if the file is not found
     except json.JSONDecodeError as e:
-        logging.error(f"Error decoding PHYSIO.JSON: {e}")
+        logging.error(f"Error decoding pt.JSON: {e}")
         return []  # return an empty list if JSON is corrupted
     
-@app.route('/physiotherapy_data', methods=['GET'])
-def get_physiotherapy_clinics():
-    medical_imaging_clinic_data = read_physio_json()  
-    if medical_imaging_clinic_data:
-        return jsonify(medical_imaging_clinic_data )  # return data
+@app.route('/pt_data', methods=['GET'])
+def get_pt_clinics():
+    pt_clinic_data = read_pt_json()  
+    if pt_clinic_data :
+        return jsonify(pt_clinic_data)  # return data
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500 
+
+@app.route('/pt-page')
+def pt_page():
+    pt_clinic_data = read_pt_json() # Get the clinic data from the JSON file
+    return render_template('pt.html', clinics=pt_clinic_data)  # Pass the data to the template
 
 ######################################################################
 #about us page

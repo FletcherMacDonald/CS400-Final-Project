@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Therapy Clinics</title>
+    <!-- Link to the existing style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="medical-imaging-page">
+    <h1>Physical Therapy Clinics</h1>
+
+    <!-- Display clinic data passed from the Flask route -->
+    {% if clinics %}
+        <div class="clinics-container">
+            <ul>
+                {% for clinic in clinics %}
+                    <li>
+                        <strong>{{ clinic.clinic_name }}</strong><br>
+                        <img class="clinic-image" 
+                             src="{{ url_for('static', filename='img/' ~ clinic.clinic_image) }}" 
+                             alt="{{ clinic.clinic_name }}">
+                        <br>
+                        <b>Address: </b>{{ clinic.address }}<br>
+                        <br>
+                        <b>Phone:</b> {{ clinic.phone_number }}<br>
+                        <br>
+                        <b>Rating:</b> {{clinic.google_review_rating}}<br>
+                        <br>
+                        <b>Hours:</b> {{clinic.clinic_hours}}<br>
+                        <br>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p>No clinic data available.</p>
+    {% endif %}
+</body>
+</html>
