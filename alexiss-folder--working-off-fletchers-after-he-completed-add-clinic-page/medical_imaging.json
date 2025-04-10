@@ -1,0 +1,73 @@
+[ 
+    {
+        "clinic_name": "Hawaii Diagnostic Radiology Services -- Liliha",
+        "address": "2230 Liliha St #106, Honolulu, HI 96817",
+        "phone_number": "(808) 949-0091",
+        "review_rating": 3.8,
+        "image_name": "hawaii-diagnostic-radiology-services.png",
+        "hours": "Mon-Fri 7am-10pm | Sat 7-3pm | Sun 7:30-4pm (MRI Only)"
+    },
+
+    {
+        "clinic_name": "Hawaii Diagnostic Radiology Services -- Waipahu",
+        "address": "94-229 Waipahu Depot St #100, Waipahu, HI 96797",
+        "phone_number": "(808) 949-0091",
+        "review_rating": 3.8,
+        "image_name": "hawaii-diagnostic-radiology-services.png",
+        "hours": "Mon, Tue, Thu, Fri 7am-4:30pm | Wed, Sat, Sun Closed"
+    },
+
+    {
+        "clinic_name": "Invision Imaging -- Medical Arts Building",
+        "address": "1010 S King St #109, Honolulu, HI 96814",
+        "phone_number": "(808) 593-8080",
+        "review_rating": 4.4,
+        "image_name": "invision-imaging.png",
+        "hours": "Mon-Fri 6am-10pm | Sat and Sun 7am-9pm (MRI Only)"
+    },
+
+    {
+        "clinic_name": "Invision Imaging -- Hale Pawa‘a Professional Services Building",
+        "address": "1401 S Beretania St. #107, Honolulu, HI 96814",
+        "phone_number": "(808) 591-1504",
+        "review_rating": 3.9,
+        "image_name": "invision-imaging.png",
+        "hours": "Mon-Fri 6:30am-9pm | Sat and Sun 7:30am-4pm (MRI Only)"
+    },
+
+    {
+        "clinic_name": "Invision Imaging -- Waterfront Plaza",
+        "address": "500 Ala Moana Blvd #5b, Honolulu, HI 96813",
+        "phone_number": "(808) 275-2008",
+        "review_rating": 3.3,
+        "image_name": "invision-imaging.png",
+        "hours": "Mon-Fri 8am-5pm | Sat 8am-12pm (CT and Ultrasound Only) | Sun Closed"
+    },
+
+    {
+        "clinic_name": "Kuakini Plaza Imaging",
+        "address": "321 N Kuakini St, Honolulu, HI 96817",
+        "phone_number": "(808) 547-9445",
+        "review_rating": 4.6,
+        "image_name": "kuakini-2.png",
+        "hours": "Mon-Fri 8am-5pm | Sat 6am-3pm | Sun Closed"
+    },
+
+    {
+        "clinic_name": "Queen's Medical Center Imaging Services",
+        "address": "1301 Punchbowl St Honolulu, HI 96813",
+        "phone_number": "(808) 691-7171",
+        "review_rating": 3.4,
+        "image_name": "queens-2.png",
+        "hours": "Mon-Sat 8am-4pm | Sun 8am-4pm (MRI Only)"
+    },
+
+    {
+        "clinic_name": "Adventist Health Castle: Imaging Center",
+        "address": "640 Ulukahiki St Kailua, HI 96734",
+        "phone_number": "(808) 263-5166",
+        "review_rating": 4.6,
+        "image_name": "adventist-health-castle.png",
+        "hours": "Mon-Fri 7am-9pm | Sat 7:30am-4pm | Sun Closed"
+    }
+]
