@@ -2,6 +2,7 @@ import json
 import logging
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS  # Correct import for CORS
+import os
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -135,8 +136,41 @@ def medical_imaging_page():
     """
     Renders the medical imaging page and passes clinic data to the template.
     """
-    medical_imaging_clinic_data = read_medical_imaging_json() # Get the clinic data from the JSON file
-    return render_template('medical-imaging.html', clinics=medical_imaging_clinic_data)  # Pass the data to the template
+    medical_imaging_clinic_data = read_medical_imaging_json() 
+    return render_template('medical-imaging.html', clinics=medical_imaging_clinic_data)  
+
+#Delete request:
+"""
+Example:
+@app.route('/delete/<int:movie_id>', methods=['DELETE'])
+def delete_movie(movie_id):
+    movie = db.session.get(Movie, movie_id)
+    if movie:
+        db.session.delete(movie)
+        db.session.commit()
+    return f'Movie: {movie.title}', 204
+"""
+
+#Trial 1
+@app.route('/delete/<clinic_name>', methods=['DELETE'])
+def delete_clinic_by_name(clinic_name):
+    json_path = 'medical_imaging.json'
+
+    if not os.path.exists(json_path):
+        return 'Data file not found.', 500
+    with open(json_path, 'r') as f:
+        clinics = json.load(f)
+    
+    updated_clinics = [clinic for clinic in clinics if clinic['clinic_name'] != clinic_name]
+    
+    if len(updated_clinics) == len(clinics):
+        return f'Clinic "{clinic_name}" not found.', 404
+
+    #save the updated list
+    with open(json_path, 'w') as f:
+        json.dump(updated_clinics, f, indent=4)
+
+    return f'Clinic "{clinic_name}" deleted successfully.', 204
 
 ######################################################################
 #wilneris!
