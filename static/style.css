@@ -331,3 +331,37 @@ form button:hover {
         max-width: 100%;
     }
 }
+/* Success page styling */
+.success-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.success-container h1 {
+    color: #2e8b57;
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.success-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #2e8b57;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.success-container a:hover {
+    background-color: #246b45;
+}

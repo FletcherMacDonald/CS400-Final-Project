@@ -1,6 +1,6 @@
 import json
 import logging
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 from flask_cors import CORS  # Correct import for CORS
 
 logging.basicConfig(level=logging.DEBUG)
@@ -59,6 +59,7 @@ def viewer_input():
     if request.method == 'POST':
         clinic_type = request.form['clinic_type']
 
+        # Read JSON based on clinic type
         if clinic_type == 'Orthopedics':
             clinics = read_ortho_json()
             filename = 'ortho.json'
@@ -71,29 +72,36 @@ def viewer_input():
         else:
             return jsonify({"error": "Invalid clinic type selected."}), 400
 
+        # Collect form data and store it in the appropriate keys
         new_clinic = {
             "type": clinic_type,
-            "name": request.form['name'],
+            "name": request.form['clinic_name'],  # Match the 'clinic_name' field from the form
             "address": request.form['address'],
-            "hours": request.form['hours'],
-            "ownership": request.form['public_private'],
-            "rating": float(request.form['rating']),
+            "hours": request.form['clinic_hours'],  # Match the 'clinic_hours' field from the form
+            "ownership": request.form['private_or_public'],  # Match the 'private_or_public' field
+            "rating": float(request.form['google_review_rating']),  # Match the 'google_review_rating' field
             "head_doctor": request.form['head_doctor'],
-            "date_established": request.form['date_established']
+            "date_established": request.form['date_of_establishment']  # Match the 'date_of_establishment' field
         }
 
+        # Append the new clinic to the list of clinics
         clinics.append(new_clinic)
 
-        # Save back to the correct JSON file
+        # Save the updated list back to the correct JSON file
         with open(filename, 'w') as f:
             json.dump(clinics, f, indent=4)
 
         logging.debug(f"New {clinic_type} clinic added successfully to {filename}.")
 
-        return jsonify({"message": f"{clinic_type} clinic added successfully!"}), 200
+        # Redirect to the success page after the form submission
+        return redirect(url_for('success_page'))
 
     # If GET request, show the form
     return render_template('add-clinic.html')
+
+@app.route('/success')
+def success_page():
+    return render_template('success.html')
 
 ######################################################################
 #alexis
