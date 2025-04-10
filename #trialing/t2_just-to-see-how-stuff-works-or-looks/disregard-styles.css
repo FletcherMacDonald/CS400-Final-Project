@@ -1,0 +1,38 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tabs {
+    display: flex;
+    background-color: #333;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tab-button:hover {
+    background-color: #555;
+  }
+  
+  .tab-button.active {
+    background-color: #4CAF50;
+  }
+  
+  /* Content styling */
+  .tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }  
