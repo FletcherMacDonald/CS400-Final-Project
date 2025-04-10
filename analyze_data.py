@@ -71,17 +71,21 @@ def viewer_input():
             filename = 'physio.json'
         else:
             return jsonify({"error": "Invalid clinic type selected."}), 400
+        
+        default_image = 'No_image_available.svg.png'
 
         # Collect form data and store it in the appropriate keys
         new_clinic = {
             "type": clinic_type,
-            "name": request.form['clinic_name'],  # Match the 'clinic_name' field from the form
+            "clinic_name": request.form['clinic_name'],  # Match the 'clinic_name' field from the form
             "address": request.form['address'],
-            "hours": request.form['clinic_hours'],  # Match the 'clinic_hours' field from the form
-            "ownership": request.form['private_or_public'],  # Match the 'private_or_public' field
-            "rating": float(request.form['google_review_rating']),  # Match the 'google_review_rating' field
+            "phone_number": request.form['phone_number'],
+            "clinic_hours": request.form['clinic_hours'],  # Match the 'clinic_hours' field from the form
+            "private_or_public": request.form['private_or_public'],  # Match the 'private_or_public' field
+            "google_review_rating": float(request.form['google_review_rating']),  # Match the 'google_review_rating' field
             "head_doctor": request.form['head_doctor'],
-            "date_established": request.form['date_of_establishment']  # Match the 'date_of_establishment' field
+            "date_of_establishment": request.form['date_of_establishment'],  # Match the 'date_of_establishment' field
+            "image_name": default_image
         }
 
         # Append the new clinic to the list of clinics

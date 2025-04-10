@@ -86,5 +86,17 @@
         "date_of_establishment": "1985",
         "private_or_public": "Private",
         "image_name": "download.png"
+    },
+    {
+        "type": "Orthopedics",
+        "clinic_name": "Fletchers Orthopedics",
+        "address": "1 Rainbow Road",
+        "phone_number": "99999999",
+        "clinic_hours": "MON-FRI 1-2",
+        "private_or_public": "Public",
+        "google_review_rating": 5.0,
+        "head_doctor": "Dr Fletcher",
+        "date_of_establishment": "1111-11-11",
+        "image_name": "No_image_available.svg.png"
     }
 ]
