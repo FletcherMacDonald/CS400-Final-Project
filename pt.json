@@ -1,0 +1,82 @@
+[   {
+    "clinic_name": "Moon Physical Therapy",
+    "address": "95-1057 Ainamakua Dr, Mililani, HI 96789",
+    "phone_number": "(808) 657-3222",
+    "google_review_rating": 4.9,
+    "clinic_hours": "Mon-Fri: 8AM-7PM",
+    "head_doctor": "Dr. Julie Moon",
+    "private_or_public": "Private",
+    "clinic_image": "MoonPT_Logo.png"
+},
+{
+    "clinic_name": "Fysiotherapie Hawaii",
+    "address": "1120 12th Ave, Honolulu, HI 96816",
+    "phone_number": "(808) 734-4043",
+    "google_review_rating": 4.1,
+    "clinic_hours": "Mon-Sat: 8AM-6PM",
+    "head_doctor": "Dr. Noe Chee",
+    "private_or_public": "Private",
+    "clinic_image": "Fysio_Logo.png"
+},
+{
+    "clinic_name": "Hands-On Physical Therapy",
+    "address": "1441 Kapiolani Blvd Ste 1113",
+    "phone_number": "(808) 218-3660",
+    "google_review_rating": 5.0,
+    "clinic_hours": "Mon-Sat: 7AM-7PM",
+    "head_doctor": "Dr. Alison Aldcroft",
+    "private_or_public": "Private",
+    "clinic_image": "Hands-OnPT_logo.jpeg"
+},
+{
+    "clinic_name": "Holomua Physical Therapy",
+    "address": "200 N Vineyard Blvd Ste 151 Honolulu, HI 96817",
+    "phone_number": "(808) 531-1122",
+    "google_review_rating": 4.6,
+    "clinic_hours": "Mon-Sat: 8AM-6PM",
+    "head_doctor": "Dr. Neil Shimabukuro",
+    "private_or_public": "Private",
+    "clinic_image": "HolomuaPT_Logo.jpeg"
+},
+
+{
+    "clinic_name": "Fukuji & Lum Physical Therapy",
+    "address": "405 N Kuakini St. Ste 701, Honolulu, HI 96817",
+    "phone_number": "(808) 261-4321",
+    "google_review_rating": 4.0,
+    "clinic_hours": "Mon-Fri: 7:30AM-6:15PM",
+    "head_doctor": "Dr. Randall Fukuji",
+    "private_or_public": "Private",
+    "clinic_image": "FukujiLumPT_Logo.png"
+},
+{
+    "clinic_name": "Surf & Shore Performance Center",
+    "address": "556 Reed Ln 201, Honolulu, HI 96813",
+    "phone_number": "(808) 599-0177",
+    "google_review_rating": 5.0,
+    "clinic_hours": "TBD",
+    "head_doctor": "Dr. Scott Layne",
+    "private_or_public": "Private",
+    "clinic_image": "SurfAndShorePT_Logo.png"
+},
+{
+    "clinic_name": "Next Step Physical Therapy",
+    "address": "1401 S Beretania St. 640, Honolulu, HI 96814",
+    "phone_number": "(808) 521-8188",
+    "google_review_rating": 5.0,
+    "clinic_hours": "Mon-Sat: 7:30AM-2:30PM",
+    "head_doctor": "Dr. John Stepien",
+    "private_or_public": "Private",
+    "clinic_image": "NextStepPT_Logo.png"
+},
+{
+    "clinic_name": "StayFIT Physical Therapy",
+    "address": "99-128 Aiea Heights Dr. Ste 207, Aiea, HI 96701",
+    "phone_number": "(808) 487-0487",
+    "google_review_rating": 4.8,
+    "clinic_hours": "Mon-Sat: 8AM-7PM",
+    "head_doctor": "Dr. Chip Yamaguchi, Dr. Catherine Koike",
+    "private_or_public": "Private",
+    "clinic_image": "StayFIT_Logo.png"
+}
+]

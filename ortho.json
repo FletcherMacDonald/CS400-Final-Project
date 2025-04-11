@@ -1,0 +1,90 @@
+[
+    {
+        "clinic_name": "All Access Ortho Oahu LLC",
+        "address": "1401 South Beretania Street, Suite 102, Honolulu, HI 96814",
+        "phone_number": "808-356-5699",
+        "google_review_rating": 4.5,
+        "clinic_hours": "Mon-Fri: 8AM - 5PM",
+        "head_doctor": "Dr. John Doe",
+        "date_of_establishment": "2005",
+        "private_or_public": "Private",
+        "image_name": "All-Access-Ortho.webp"
+    },
+    {
+        "clinic_name": "IMUA Orthopedics, Sports & Health",
+        "address": "1010 South King Street, Suite 401, Honolulu, HI 96814",
+        "phone_number": "808-521-8170",
+        "google_review_rating": 4.8,
+        "clinic_hours": "Mon-Sat: 9AM - 6PM",
+        "head_doctor": "Dr. Jane Smith",
+        "date_of_establishment": "2010",
+        "private_or_public": "Private",
+        "image_name": "PracticeLogo.png"
+    },
+    {
+        "clinic_name": "Island Orthopaedics \u2013 Honolulu Office",
+        "address": "3382 Wai\u02bbalae Avenue, Honolulu, HI 96816",
+        "phone_number": "808-548-7033",
+        "google_review_rating": 4.6,
+        "clinic_hours": "Mon-Fri: 8AM - 5PM, Sat: 9AM - 2PM",
+        "head_doctor": "Dr. Alan Wong",
+        "date_of_establishment": "1998",
+        "private_or_public": "Private",
+        "image_name": "bc1888_2f01d0e81efe47a9b35bcd4ae1b50867~mv2.png"
+    },
+    {
+        "clinic_name": "Orthopedics Hawaii",
+        "address": "First Insurance Center, 1100 Ward Avenue, Suite 500, Honolulu, HI 96814",
+        "phone_number": "808-521-8108",
+        "google_review_rating": 4.7,
+        "clinic_hours": "Mon-Fri: 7AM - 5PM",
+        "head_doctor": "Dr. Sarah Kim",
+        "date_of_establishment": "2002",
+        "private_or_public": "Private",
+        "image_name": "Ortho+Hawaii+NEW+FINAL+lg+red-black-blue+text+grey+mount.png"
+    },
+    {
+        "clinic_name": "The Queen's Medical Center \u2013 Orthopedic Services",
+        "address": "1301 Punchbowl Street, Honolulu, HI 96813",
+        "phone_number": "808-691-1000",
+        "google_review_rating": 4.4,
+        "clinic_hours": "Mon-Sun: Open 24 Hours",
+        "head_doctor": "Dr. Robert Chang",
+        "date_of_establishment": "1859",
+        "private_or_public": "Public",
+        "image_name": "queens-placeholder.png"
+    },
+    {
+        "clinic_name": "Kuakini Health System \u2013 Orthopedic Clinic",
+        "address": "347 N Kuakini Street, Honolulu, HI 96817",
+        "phone_number": "808-439-6201",
+        "google_review_rating": 4.3,
+        "clinic_hours": "Mon-Fri: 8AM - 4PM",
+        "head_doctor": "Dr. Emily Tanaka",
+        "date_of_establishment": "1900",
+        "private_or_public": "Public",
+        "image_name": "591386.avif"
+    },
+    {
+        "clinic_name": "Hawaii Shoulder & Orthopedic Institute",
+        "address": "1441 Kapiolani Blvd, Suite 2020, Honolulu, HI 96814",
+        "phone_number": "808-521-4262",
+        "google_review_rating": 4.6,
+        "clinic_hours": "Mon-Fri: 9AM - 5PM, Sat: 10AM - 3PM",
+        "head_doctor": "Dr. Mark Rivera",
+        "date_of_establishment": "2015",
+        "private_or_public": "Private",
+        "image_name": "6060df11343bd7fabc5cbfa8_HiSOI-logo-primary-500.png"
+    },
+    {
+        "clinic_name": "Orthopedic Associates of Hawaii",
+        "address": "1401 South Beretania Street, Suite 750, Honolulu, HI 96814",
+        "phone_number": "808-536-2261",
+        "google_review_rating": 4.2,
+        "clinic_hours": "Mon-Fri: 8AM - 6PM",
+        "head_doctor": "Dr. Lisa Nakamura",
+        "date_of_establishment": "1985",
+        "private_or_public": "Private",
+        "image_name": "download.png"
+    }
+]
