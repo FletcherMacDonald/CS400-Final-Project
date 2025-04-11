@@ -2,6 +2,7 @@ import json
 import logging
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 from flask_cors import CORS  # Correct import for CORS
+import os
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -67,7 +68,7 @@ def viewer_input():
             clinics = read_medical_imaging_json()
             filename = 'medical_imaging.json'
         elif clinic_type == 'Physical Therapy':
-            clinics = read_physio_json()
+            clinics = read_pt_json()
             filename = 'physio.json'
         else:
             return jsonify({"error": "Invalid clinic type selected."}), 400
@@ -125,7 +126,7 @@ def read_medical_imaging_json() -> list:
     try:
         with open('medical_imaging.json', 'r') as f:
             medical_imaging_clinic_data = json.load(f)
-            logging.debug("Successfully loaded data from 'ortho.json'.")
+            logging.debug("Successfully loaded data from 'medical_imaging.json'.")
             return medical_imaging_clinic_data
     except FileNotFoundError as e:
         logging.error(f"File not found: {e}")
@@ -134,12 +135,11 @@ def read_medical_imaging_json() -> list:
         logging.error(f"Error decoding JSON: {e}")
         return []  # Return an empty list if JSON is corrupted
     
-#@app.route('/homepage/medical-imaging_data', methods=['GET'])
 @app.route('/medical-imaging_data', methods=['GET'])
 def get_medical_imaging_clinics():
-    medical_imaging_clinic_data = read_medical_imaging_json()  #  makes read_json function ortho_clinic_data to load the data 
+    medical_imaging_clinic_data = read_medical_imaging_json()  
     if medical_imaging_clinic_data:
-        return jsonify(medical_imaging_clinic_data )  # return the ortho_clinic_data
+        return jsonify(medical_imaging_clinic_data )  
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500 
 
@@ -148,40 +148,77 @@ def medical_imaging_page():
     """
     Renders the medical imaging page and passes clinic data to the template.
     """
-    medical_imaging_clinic_data = read_medical_imaging_json() # Get the clinic data from the JSON file
-    return render_template('medical-imaging.html', clinics=medical_imaging_clinic_data)  # Pass the data to the template
+    medical_imaging_clinic_data = read_medical_imaging_json() 
+    return render_template('medical-imaging.html', clinics=medical_imaging_clinic_data)  
+
+#Delete request:
+"""
+Example:
+@app.route('/delete/<int:movie_id>', methods=['DELETE'])
+def delete_movie(movie_id):
+    movie = db.session.get(Movie, movie_id)
+    if movie:
+        db.session.delete(movie)
+        db.session.commit()
+    return f'Movie: {movie.title}', 204
+"""
+
+@app.route('/delete/<clinic_name>', methods=['DELETE'])
+def delete_clinic_by_name(clinic_name):
+    json_path = 'medical_imaging.json'
+
+    if not os.path.exists(json_path):
+        return 'Data file not found.', 500
+    with open(json_path, 'r') as f:
+        clinics = json.load(f)
+    
+    updated_clinics = [clinic for clinic in clinics if clinic['clinic_name'] != clinic_name]
+    
+    if len(updated_clinics) == len(clinics):
+        return f'Clinic "{clinic_name}" not found.', 404
+
+    #save the updated list
+    with open(json_path, 'w') as f:
+        json.dump(updated_clinics, f, indent=4)
+
+    return f'Clinic "{clinic_name}" deleted successfully.', 204
 
 ######################################################################
 #wilneris!
-def read_physio_json() -> list:
+def read_pt_json() -> list:
     """
-    Reads JSON data from the 'physio.json' file.
+    Reads JSON data from the 'pt.json' file.
     
     Description:
-    This function opens 'pysio.json' and loads the clinic data list.
+    This function opens 'pt.json' and loads the clinic data list.
     
     Returns:
-    list: A list of dictionaries representing physiotherapy clinics.
+    list: A list of dictionaries representing pt clinics.
     """
     try:
-        with open('physio.json', 'r') as f:
-            physio_clinic_data = json.load(f)
-            logging.debug("Successfully loaded data from 'physio.json'.")
-            return physio_clinic_data
+        with open('pt.json', 'r') as f:
+            pt_clinic_data = json.load(f)
+            logging.debug("Successfully loaded data from 'pt.json'.")
+            return pt_clinic_data
     except FileNotFoundError as e:
         logging.error(f"File not found: {e}")
         return []  # return an empty list if the file is not found
     except json.JSONDecodeError as e:
-        logging.error(f"Error decoding PHYSIO.JSON: {e}")
+        logging.error(f"Error decoding pt.JSON: {e}")
         return []  # return an empty list if JSON is corrupted
     
-@app.route('/physiotherapy_data', methods=['GET'])
-def get_physiotherapy_clinics():
-    medical_imaging_clinic_data = read_physio_json()  
-    if medical_imaging_clinic_data:
-        return jsonify(medical_imaging_clinic_data )  # return data
+@app.route('/pt_data', methods=['GET'])
+def get_pt_clinics():
+    pt_clinic_data = read_pt_json()  
+    if pt_clinic_data :
+        return jsonify(pt_clinic_data)  # return data
     else:
         return jsonify({"error": "Unable to load clinic data"}), 500 
+
+@app.route('/pt-page')
+def pt_page():
+    pt_clinic_data = read_pt_json() # Get the clinic data from the JSON file
+    return render_template('pt.html', clinics=pt_clinic_data)  # Pass the data to the template
 
 ######################################################################
 #about us page
