@@ -69,7 +69,7 @@ def viewer_input():
             filename = 'medical_imaging.json'
         elif clinic_type == 'Physical Therapy':
             clinics = read_pt_json()
-            filename = 'physio.json'
+            filename = 'pt.json'
         else:
             return jsonify({"error": "Invalid clinic type selected."}), 400
         
