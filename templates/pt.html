@@ -18,7 +18,7 @@
                     <li>
                         <strong>{{ clinic.clinic_name }}</strong><br>
                         <img class="clinic-image" 
-                             src="{{ url_for('static', filename='img/' ~ clinic.clinic_image) }}" 
+                             src="{{ url_for('static', filename='img/' ~ clinic.image_name) }}" 
                              alt="{{ clinic.clinic_name }}">
                         <br>
                         <b>Address: </b>{{ clinic.address }}<br>
