@@ -163,8 +163,8 @@ def delete_movie(movie_id):
     return f'Movie: {movie.title}', 204
 """
 
-@app.route('/delete/<clinic_name>', methods=['DELETE'])
-def delete_clinic_by_name(clinic_name):
+@app.route('/delete/<clinic_name>', methods=['DELETE']) #works in postman
+def delete_clinic_by_name(clinic_name): #delete a medical imaging clinic
     json_path = 'medical_imaging.json'
 
     if not os.path.exists(json_path):

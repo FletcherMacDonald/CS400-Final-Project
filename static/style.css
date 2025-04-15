@@ -365,3 +365,39 @@ form button:hover {
 .success-container a:hover {
     background-color: #246b45;
 }
+
+/*
+About me section below
+*/
+
+#about-section {
+    padding: 60px 10%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-align: left;
+  }
+  
+  #about-section h2 {
+    font-size: var(--med-font);
+    margin-bottom: 20px;
+  }
+  
+  #about-section p {
+    font-size: var(--p-font);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .btn-link {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-link:hover {
+    background-color: #888;
+  }
