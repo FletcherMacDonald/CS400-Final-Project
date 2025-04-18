@@ -65,7 +65,7 @@ def test_viewer_input():
     assert "success" in response.text.lower()
 
 #TESTING OUR DELETE REQUEST: #############################################################
-#5:
+#5 :
 def test_delete_clinic_by_name():
     clinic_name = "Kuakini Plaza Imaging"
     url = f"http://127.0.0.1:5555/delete/{clinic_name}"
