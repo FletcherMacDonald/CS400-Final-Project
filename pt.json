@@ -50,14 +50,14 @@
         "image_name": "FukujiLumPT_Logo.png"
     },
     {
-        "clinic_name": "Surf & Shore Performance Center",
-        "address": "556 Reed Ln 201, Honolulu, HI 96813",
-        "phone_number": "(808) 599-0177",
+        "clinic_name": "Apex Physical Therapy Specialists",
+        "address": "1314 S King St. Ste 1455, Honolulu, HI 96814",
+        "phone_number": "(808) 521-8500",
         "google_review_rating": 5.0,
-        "clinic_hours": "TBD",
-        "head_doctor": "Dr. Scott Layne",
+        "clinic_hours": "Mon-Sat: 8:00AM-5:00PM",
+        "head_doctor": "Dr. Shawna Yee",
         "private_or_public": "Private",
-        "image_name": "SurfAndShorePT_Logo.png"
+        "image_name": "ApexPT_Logo.png"
     },
     {
         "clinic_name": "Next Step Physical Therapy",
