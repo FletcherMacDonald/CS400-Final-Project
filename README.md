@@ -10,7 +10,7 @@ Link to API Documentation:
 How to Run Software Application: 
 1. Go to the CS400-Final-Project repo and into the 'current-website-branch-2' branch and clone the repository to your computer locally using: 
 ```python
-git clone --branch current-website-branch-2 https://github.com/FletcherMacDonald/CS400-Final-Project.git
+git clone --branch final https://github.com/FletcherMacDonald/CS400-Final-Project.git
 ```
 
 2. Open up your terminal and cd into the CS400-Final-Project folder.
