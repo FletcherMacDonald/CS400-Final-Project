@@ -1,5 +1,3 @@
-Latest Commit: 2aa4ad9
-
 Project Title: Rehab Revive
 
 Group Name: OrangeOS
@@ -10,7 +8,7 @@ Link to API Documentation:
 [https://documenter.getpostman.com/view/42594454/2sB2ca7L7F]
 
 How to Run Software Application: 
-1. Go to the CS400-Final-Project repo and into the 'current-website-branch-2' branch and clone the repository to your computer locally using: 
+1. Go to the CS400-Final-Project repo and into the 'final' branch and clone the repository to your computer locally using: 
 ```python
 git clone --branch final https://github.com/FletcherMacDonald/CS400-Final-Project.git
 ```
